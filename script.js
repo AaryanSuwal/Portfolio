@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.querySelector('.hamburger');
     const nav = document.querySelector('.nav-section .nav');
     const navLinks = document.querySelectorAll('.nav-section .nav a');
+    const body = document.body;
 
     // Check if hamburger exists before adding event listener
     if (hamburger && nav) {
@@ -13,6 +14,10 @@ document.addEventListener('DOMContentLoaded', () => {
             e.stopPropagation(); // Prevent event bubbling
             hamburger.classList.toggle('active');
             nav.classList.toggle('active');
+            
+            // Toggle body scroll lock and blur
+            body.classList.toggle('lock-scroll');
+            body.classList.toggle('menu-active');
         });
 
         // Close menu when a nav link is clicked
@@ -20,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 nav.classList.remove('active');
+                body.classList.remove('lock-scroll');
+                body.classList.remove('menu-active');
             });
         });
 
@@ -28,6 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
                 hamburger.classList.remove('active');
                 nav.classList.remove('active');
+                body.classList.remove('lock-scroll');
+                body.classList.remove('menu-active');
             }
         });
     }
@@ -38,6 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const target = document.querySelector(targetId);
+            
+            // Close hamburger menu and remove blur
+            if (hamburger && nav) {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+                body.classList.remove('lock-scroll');
+                body.classList.remove('menu-active');
+            }
             
             if (target) {
                 target.scrollIntoView({
