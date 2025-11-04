@@ -176,7 +176,9 @@ body.menu-active::before {
 .home-section {
     height: calc(100vh - 90px);
     width: 100%;
-    background: var(--background-light);
+    /* background: var(--background-light); */
+    background: url(home.jpg) no-repeat;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -269,12 +271,12 @@ body.menu-active::before {
     display: inline-block;
     margin-top: 60px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 4px 15px rgba(17, 25, 41, 0.3);
 }
 
 .home-heading .heading-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 8px 25px rgba(17, 25, 41, 0.3);
     animation: none;
 }
 
@@ -422,12 +424,12 @@ body.menu-active::before {
     color: #fff;
     display: inline-block;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 4px 15px rgba(17, 25, 41, 0.3);
 }
 
 .know-more .contact-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 8px 25px rgba(17, 25, 41, 0.3);
 }
 
 .about-more .skills {
@@ -485,7 +487,7 @@ body.menu-active::before {
 
 .skill-tag:hover {
     transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 4px 12px rgba(17, 25, 41, 0.3);
 }
 
 /* PROJECT SECTION */
@@ -647,13 +649,13 @@ body.menu-active::before {
     align-items: center;
     gap: 10px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 4px 15px rgba(17, 25, 41, 0.3);
     border: none;
 }
 
 .project-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 8px 25px rgba(17, 25, 41, 0.3);
 }
 
 .project-btn svg {
@@ -759,12 +761,12 @@ body.menu-active::before {
     color: #fff;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 4px 15px rgba(17, 25, 41, 0.3);
 }
 
 .submit-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+    box-shadow: 0 8px 25px rgba(17, 25, 41, 0.3);
 }
 
 /* FOOTER */
